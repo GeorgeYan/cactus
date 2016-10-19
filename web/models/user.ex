@@ -9,4 +9,11 @@ defmodule Rumbl.User do
     field :password_hash, :string
     timestamps
   end
+
+  def changeset(model, params \\ :empty) do
+    model
+    |> cast(params, ~w(name username), [])
+    |> validate_length(:name, min: 1, max: 20)
+    |> validate_length(:username, min: 1, max: 20)
+  end
 end
