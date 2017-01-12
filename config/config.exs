@@ -11,7 +11,7 @@ config :rumbl,
 
 # Configures the endpoint
 config :rumbl, Rumbl.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "127.0.0.1", port: 4000],
   secret_key_base: "SRGbScVNYeEIziawbUBUAv1WBc+UHPogXL76Cixloa1r1e6aF9LlMnu7A13r+NgC",
   render_errors: [view: Rumbl.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Rumbl.PubSub,
